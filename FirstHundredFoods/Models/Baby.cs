@@ -7,11 +7,11 @@ namespace FirstHundredFoods.Models
         [Required]
         public int ID { get; set; }
 
-        [Required, StringLength(50, MinimumLength = 2)]
-        public string FirstName { get; set; } = string.Empty;
+        [Required, StringLength(50, MinimumLength = 2), RegularExpression(@"^[A-Z]+[a-zA-Z\s]+$")]
+        public string FirstName { get; set; }
 
-        [Required, StringLength(50, MinimumLength = 2)]
-        public string LastName { get; set; } = string.Empty;
+        [Required, StringLength(50, MinimumLength = 2), RegularExpression(@"^[A-Z]+[a-zA-Z\s]+$")]
+        public string LastName { get; set; }
 
         [Required, DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
