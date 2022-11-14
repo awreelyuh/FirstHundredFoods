@@ -16,6 +16,7 @@ namespace FirstHundredFoods.Models
         [Required, DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
 
-        public List<Food> Foods { get; set; }
+        public ICollection<Food> Foods { get; set; }
+        public ICollection<Allergen> Allergens { get; set; }
     }
 }
