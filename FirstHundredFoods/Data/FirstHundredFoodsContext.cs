@@ -15,14 +15,12 @@ namespace FirstHundredFoods.Data
         }
         
         public DbSet<Baby> Babies { get; set; } = default!;
-        public DbSet<Allergen> Allergens { get; set; }
         public DbSet<Food> Foods { get; set; }
         public DbSet<Parent> Parents { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Baby>().ToTable("Baby");
-            modelBuilder.Entity<Allergen>().ToTable("Allergen");
             modelBuilder.Entity<Food>().ToTable("Food");
             modelBuilder.Entity<Parent>().ToTable("Parent");
         }

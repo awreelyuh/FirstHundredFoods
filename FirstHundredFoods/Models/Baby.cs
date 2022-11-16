@@ -6,8 +6,7 @@ namespace FirstHundredFoods.Models
     {
         [Required]
         public int ID { get; set; }
-
-        [Required]
+                
         public int ParentID { get; set; }
 
         [Required, StringLength(50, MinimumLength = 2), RegularExpression(@"^[A-Z]+[a-zA-Z\s]+$")]
@@ -20,7 +19,6 @@ namespace FirstHundredFoods.Models
         public DateTime DateOfBirth { get; set; }
 
         public ICollection<Food> Foods { get; set; }
-        public ICollection<Allergen> Allergens { get; set; } //What a baby might be allergic to
         public Parent Parent { get; set; }
     }
 }
