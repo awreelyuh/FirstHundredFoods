@@ -14,6 +14,9 @@ namespace FirstHundredFoods.Data
         {
         }
 
-        public DbSet<FirstHundredFoods.Models.Baby> Baby { get; set; } = default!;
+        public DbSet<Baby> Babies { get; set; } = default!;
+        public DbSet<Allergen> Allergens { get; set; }
+        public DbSet<Food> Foods { get; set; }
+        public DbSet<Parent> Parents { get; set; }
     }
 }

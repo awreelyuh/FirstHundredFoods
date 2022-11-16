@@ -9,7 +9,8 @@ namespace FirstHundredFoods
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddDbContext<FirstHundredFoodsContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("FirstHundredFoodsContext") ?? throw new InvalidOperationException("Connection string 'FirstHundredFoodsContext' not found.")));
+                options.UseSqlite(builder.Configuration.GetConnectionString("FirstHundredFoodsContext") ?? 
+                throw new InvalidOperationException("Connection string 'FirstHundredFoodsContext' not found.")));
 
             // Add services to the container.
             builder.Services.AddRazorPages();
