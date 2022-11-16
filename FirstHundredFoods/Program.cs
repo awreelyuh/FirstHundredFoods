@@ -8,12 +8,12 @@ namespace FirstHundredFoods
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddDbContext<FirstHundredFoodsContext>(options =>
-                options.UseSqlite(builder.Configuration.GetConnectionString("FirstHundredFoodsContext") ?? 
-                throw new InvalidOperationException("Connection string 'FirstHundredFoodsContext' not found.")));
-
-            // Add services to the container.
+            
             builder.Services.AddRazorPages();
+
+            builder.Services.AddDbContext<FirstHundredFoodsContext>(options =>
+                options.UseSqlite(builder.Configuration.GetConnectionString("FirstHundredFoodsContextSQLite") ?? 
+                throw new InvalidOperationException("Connection string 'FirstHundredFoodsContextSQLite' not found.")));
 
             var app = builder.Build();
 
