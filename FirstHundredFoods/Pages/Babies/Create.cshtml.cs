@@ -37,7 +37,7 @@ namespace FirstHundredFoods.Pages.Babies
                 return Page();
             }
 
-            _context.Baby.Add(Baby);
+            _context.Babies.Add(Baby);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

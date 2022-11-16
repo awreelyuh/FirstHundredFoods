@@ -24,12 +24,12 @@ namespace FirstHundredFoods.Pages.Babies
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Baby == null)
+            if (id == null || _context.Babies == null)
             {
                 return NotFound();
             }
 
-            var baby = await _context.Baby.FirstOrDefaultAsync(m => m.ID == id);
+            var baby = await _context.Babies.FirstOrDefaultAsync(m => m.ID == id);
 
             if (baby == null)
             {
@@ -44,16 +44,16 @@ namespace FirstHundredFoods.Pages.Babies
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || _context.Baby == null)
+            if (id == null || _context.Babies == null)
             {
                 return NotFound();
             }
-            var baby = await _context.Baby.FindAsync(id);
+            var baby = await _context.Babies.FindAsync(id);
 
             if (baby != null)
             {
                 Baby = baby;
-                _context.Baby.Remove(Baby);
+                _context.Babies.Remove(Baby);
                 await _context.SaveChangesAsync();
             }
 

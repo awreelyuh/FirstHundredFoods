@@ -23,9 +23,9 @@ namespace FirstHundredFoods.Pages.Babies
 
         public async Task OnGetAsync()
         {
-            if (_context.Baby != null)
+            if (_context.Babies != null)
             {
-                Baby = await _context.Baby
+                Baby = await _context.Babies
                 .Include(b => b.Parent).ToListAsync();
             }
         }
