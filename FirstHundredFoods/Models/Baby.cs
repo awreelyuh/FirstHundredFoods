@@ -17,6 +17,8 @@ namespace FirstHundredFoods.Models
         public DateTime DateOfBirth { get; set; }
 
         public ICollection<Food> Foods { get; set; }
+        
+        public int ParentID { get; set; }
         public Parent Parent { get; set; }
     }
 }

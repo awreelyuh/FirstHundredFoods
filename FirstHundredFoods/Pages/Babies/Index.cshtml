@@ -41,7 +41,10 @@
                 @Html.DisplayFor(modelItem => item.DateOfBirth)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Parent.ID)
+                @Html.DisplayFor(modelItem => item.Parent.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Parent.LastName)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |

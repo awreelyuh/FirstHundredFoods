@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using FirstHundredFoods.Models;
 using Microsoft.EntityFrameworkCore;
-using FirstHundredFoods.Models;
 
 namespace FirstHundredFoods.Data
 {
@@ -14,7 +10,7 @@ namespace FirstHundredFoods.Data
         {
         }
         
-        public DbSet<Baby> Babies { get; set; } = default!;
+        public DbSet<Baby> Babies { get; set; }
         public DbSet<Food> Foods { get; set; }
         public DbSet<Parent> Parents { get; set; }
 

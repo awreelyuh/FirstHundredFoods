@@ -35,7 +35,7 @@ namespace FirstHundredFoods
 
                 var context = services.GetRequiredService<FirstHundredFoodsContext>();
                 context.Database.EnsureCreated();
-                // DbInitializer.Initialize(context);
+                DbInitializer.Initialize(context);
             }
 
             app.UseHttpsRedirection();
