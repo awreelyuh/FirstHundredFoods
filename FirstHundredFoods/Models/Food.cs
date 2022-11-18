@@ -4,7 +4,7 @@ namespace FirstHundredFoods.Models
 {
     public enum FoodType
     {
-        vegetable, fruit, meat, nut, grain, dairy, seafood, herbSpice, legumeBean
+        Vegetable, Fruit, Meat, Nut, Grain, Dairy, Seafood, HerbSpice, LegumeBean
     }
     public class Food
     {
