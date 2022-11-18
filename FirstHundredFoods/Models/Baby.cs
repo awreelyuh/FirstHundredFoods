@@ -7,8 +7,6 @@ namespace FirstHundredFoods.Models
         [Required]
         public int ID { get; set; }
                 
-        public int ParentID { get; set; }
-
         [Required, StringLength(50, MinimumLength = 2), RegularExpression(@"^[A-Z]+[a-zA-Z\s]+$")]
         public string FirstName { get; set; }
 
