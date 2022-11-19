@@ -19,13 +19,13 @@ namespace FirstHundredFoods.Pages.Foods
             _context = context;
         }
 
-        public IList<Food> Food { get;set; } = default!;
+        public IList<Food> Food { get;set; }
 
         public async Task OnGetAsync()
         {
             if (_context.Foods != null)
             {
-                Food = await _context.Foods.ToListAsync();
+                Food = await _context.Foods.OrderBy(x => x.Name).ToListAsync();
             }
         }
     }
